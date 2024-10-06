@@ -18,6 +18,12 @@ export class Game extends Scene
         this.camera = this.cameras.main;
         this.camera.setBackgroundColor(0x00ff00);
 
+        // 게임 속도 설정
+        // 각 컴포넌트별로 속도설정은 각각 해야함.
+        const gameSpeed = 1.2;
+        this.anims.globalTimeScale = gameSpeed;
+        this.tweens.timeScale = gameSpeed;        
+
         // 애니메이션 초기화
         this.initAmimation();
 
