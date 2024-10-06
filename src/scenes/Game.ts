@@ -7,6 +7,8 @@ export class Game extends Scene
     msg_text : Phaser.GameObjects.Text;    
 
     charYuri: Phaser.GameObjects.Sprite;
+    bg: Phaser.GameObjects.Image;
+    shadow : Phaser.GameObjects.Graphics;
 
     constructor ()
     {
@@ -24,8 +26,19 @@ export class Game extends Scene
         this.anims.globalTimeScale = gameSpeed;
         this.tweens.timeScale = gameSpeed;        
 
+        // 배경 이미지 추가
+        this.bg = this.add.image(1920/2, 1080/2, 'bg_inside');
+        this.bg.setScale(0.75);
+        this.bg.setPosition( 550, 380);
+        
         // 애니메이션 초기화
         this.initAmimation();
+
+        // 그림자 추가
+        this.shadow = this.add.graphics();
+        this.shadow.fillStyle(0x000000, 0.3); // 반투명한 검정색
+        this.shadow.fillEllipse(0, 0, 130, 50); // 타원형 그림자
+        this.shadow.setPosition(this.charYuri.x, 650);
 
         this.input.once('pointerdown', () => {
 

@@ -31,8 +31,10 @@ export class Preloader extends Scene
     {
         //  Load the assets for the game - Replace with your own assets
         this.load.setPath('assets');
-
         this.load.image('logo', 'logo.png');
+
+        // 게임 배경 로드
+        this.load.image('bg_inside', 'bg_inside.png');
 
         // 유리 애니메이션 로드
         this.load.atlas('C_SK_atlas', 'character/Yuri/C_SK.png','character/Yuri/C_SK.json' );
