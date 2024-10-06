@@ -33,6 +33,9 @@ export class Preloader extends Scene
         this.load.setPath('assets');
 
         this.load.image('logo', 'logo.png');
+
+        // 배경음악 로드
+        this.load.audio('music_bg', 'music/BG_DavidKBD.ogg');
     }
 
     create ()

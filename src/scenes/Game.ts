@@ -4,7 +4,7 @@ export class Game extends Scene
 {
     camera: Phaser.Cameras.Scene2D.Camera;
     background: Phaser.GameObjects.Image;
-    msg_text : Phaser.GameObjects.Text;
+    msg_text : Phaser.GameObjects.Text;    
 
     constructor ()
     {
@@ -26,10 +26,11 @@ export class Game extends Scene
         });
         this.msg_text.setOrigin(0.5);
 
+
         this.input.once('pointerdown', () => {
 
-            this.scene.start('GameOver');
-
+            // 버튼 클릭 시 실행할 코드 추가            
+            //this.scene.start('GameOver');
         });
     }
 }
