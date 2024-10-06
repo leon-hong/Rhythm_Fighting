@@ -11,6 +11,7 @@ export class Game extends Scene
     shadow : Phaser.GameObjects.Graphics;
     cursors: Phaser.Types.Input.Keyboard.CursorKeys;
     isCmdExecuted: boolean = false;
+    spaceBar: Phaser.Input.Keyboard.Key;
 
     constructor ()
     {
@@ -43,15 +44,11 @@ export class Game extends Scene
         this.shadow.setPosition(this.charYuri.x, 650);
 
         // 키보드 입력 설정
+        // 방향은 cursors로, 스페이스바는 spaceBar로 사용
         if(this.input.keyboard) {
             this.cursors = this.input.keyboard.createCursorKeys();
+            this.spaceBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         }
-
-        this.input.once('pointerdown', () => {
-
-            // 버튼 클릭 시 실행할 코드 추가            
-            //this.scene.start('GameOver');
-        });
     }
 
     update() {
@@ -95,7 +92,29 @@ export class Game extends Scene
         } else if (this.cursors.down.isDown && !this.isCmdExecuted) {
             console.log('Down arrow key is pressed');
         }
-    
+        if (this.spaceBar.isDown && !this.isCmdExecuted) {
+            console.log('Space bar is pressed');
+
+            this.isCmdExecuted = true;
+            
+            this.charYuri.play('C_SK', true);
+
+            this.charYuri.setPosition( this.charYuri.x + 70, this.charYuri.y + 48);
+
+            this.tweens.add({
+                targets: this.charYuri,
+                x: this.charYuri.x + 0,
+                duration: 1000,
+                ease: 'Power2',
+                onComplete: () => {
+                    this.isCmdExecuted = false;
+                    this.charYuri.setPosition( this.charYuri.x - 70, this.charYuri.y - 48);
+                    this.charYuri.play('S_idle', true)
+                }
+            });            
+        }    
+
+
         this.shadow.setPosition(this.charYuri.x, 650);
     }
 
