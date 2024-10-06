@@ -34,6 +34,15 @@ export class Preloader extends Scene
 
         this.load.image('logo', 'logo.png');
 
+        // 유리 애니메이션 로드
+        this.load.atlas('C_SK_atlas', 'character/Yuri/C_SK.png','character/Yuri/C_SK.json' );
+        this.load.atlas('F_dash_atlas', 'character/Yuri/F_dash.png','character/Yuri/F_dash.json' );
+        this.load.atlas('F_walk_atlas', 'character/Yuri/F_walk.png','character/Yuri/F_walk.json' );
+        this.load.atlas('B_walk_atlas', 'character/Yuri/B_walk.png','character/Yuri/B_walk.json' );
+        this.load.atlas('B_step_atlas', 'character/Yuri/B_step.png','character/Yuri/B_step.json' );
+        this.load.atlas('S_idle_atlas', 'character/Yuri/S_idle.png','character/Yuri/S_idle.json' );
+        this.load.atlas('S_LK_atlas', 'character/Yuri/S_LK.png','character/Yuri/S_LK.json' );
+
         // 배경음악 로드
         this.load.audio('music_bg', 'music/BG_DavidKBD.ogg');
     }
