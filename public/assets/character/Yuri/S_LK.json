@@ -1,0 +1,188 @@
+{
+	"textures": [
+		{
+			"image": "S_LK.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 200,
+				"h": 206
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "ani-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 102,
+						"h": 105
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 102,
+						"h": 105
+					}
+				},
+				{
+					"filename": "ani-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 94,
+						"h": 102
+					},
+					"frame": {
+						"x": 105,
+						"y": 1,
+						"w": 94,
+						"h": 102
+					}
+				},
+				{
+					"filename": "ani-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 10,
+						"w": 56,
+						"h": 95
+					},
+					"frame": {
+						"x": 1,
+						"y": 108,
+						"w": 56,
+						"h": 95
+					}
+				},
+				{
+					"filename": "ani-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 9,
+						"w": 50,
+						"h": 96
+					},
+					"frame": {
+						"x": 59,
+						"y": 108,
+						"w": 50,
+						"h": 96
+					}
+				},
+				{
+					"filename": "ani-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 9,
+						"w": 50,
+						"h": 96
+					},
+					"frame": {
+						"x": 59,
+						"y": 108,
+						"w": 50,
+						"h": 96
+					}
+				},
+				{
+					"filename": "ani-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 45,
+						"h": 100
+					},
+					"frame": {
+						"x": 111,
+						"y": 105,
+						"w": 45,
+						"h": 100
+					}
+				},
+				{
+					"filename": "ani-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 9,
+						"w": 38,
+						"h": 96
+					},
+					"frame": {
+						"x": 158,
+						"y": 105,
+						"w": 38,
+						"h": 96
+					}
+				},
+				{
+					"filename": "ani-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 105
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 9,
+						"w": 38,
+						"h": 96
+					},
+					"frame": {
+						"x": 158,
+						"y": 105,
+						"w": 38,
+						"h": 96
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:4af3584572796b1ed78dd122f25df778:7dbd0f6fdd112e66ec4257fd21d2414b:b170db1a324237111e8b7d5558f2a478$"
+	}
+}
