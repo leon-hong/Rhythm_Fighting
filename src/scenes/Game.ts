@@ -9,6 +9,8 @@ export class Game extends Scene
     charYuri: Phaser.GameObjects.Sprite;
     bg: Phaser.GameObjects.Image;
     shadow : Phaser.GameObjects.Graphics;
+    cursors: Phaser.Types.Input.Keyboard.CursorKeys;
+    isCmdExecuted: boolean = false;
 
     constructor ()
     {
@@ -40,11 +42,61 @@ export class Game extends Scene
         this.shadow.fillEllipse(0, 0, 130, 50); // 타원형 그림자
         this.shadow.setPosition(this.charYuri.x, 650);
 
+        // 키보드 입력 설정
+        if(this.input.keyboard) {
+            this.cursors = this.input.keyboard.createCursorKeys();
+        }
+
         this.input.once('pointerdown', () => {
 
             // 버튼 클릭 시 실행할 코드 추가            
             //this.scene.start('GameOver');
         });
+    }
+
+    update() {
+        
+        // 키보드 입력 감지 및 처리
+        if (this.cursors.left.isDown && !this.isCmdExecuted) {            
+            console.log('Left arrow key is pressed');
+
+            this.isCmdExecuted = true;
+
+            // 왼쪽으로 이동            
+            this.charYuri.play('B_walk', true);
+            this.tweens.add({
+                targets: this.charYuri,
+                x: this.charYuri.x - 120,
+                duration: 500,
+                onComplete: () => {
+                    this.isCmdExecuted = false;
+                    this.charYuri.play('S_idle', true)
+                }
+            });                    
+
+        } else if (this.cursors.right.isDown && !this.isCmdExecuted) {
+            console.log('Right arrow key is pressed');
+            
+            this.isCmdExecuted = true;
+
+            // 오른쪽으로 이동            
+            this.charYuri.play('F_walk', true);
+            this.tweens.add({
+                targets: this.charYuri,
+                x: this.charYuri.x + 120,
+                duration: 500,
+                onComplete: () => {
+                    this.isCmdExecuted = false;
+                    this.charYuri.play('S_idle', true)
+                }
+            });
+        } else if (this.cursors.up.isDown && !this.isCmdExecuted) {
+            console.log('Up arrow key is pressed');    
+        } else if (this.cursors.down.isDown && !this.isCmdExecuted) {
+            console.log('Down arrow key is pressed');
+        }
+    
+        this.shadow.setPosition(this.charYuri.x, 650);
     }
 
     // 애니메이션 초기화 코드 추가
@@ -144,6 +196,7 @@ export class Game extends Scene
             repeat: -1
         });
     }
+
 
 
 }
