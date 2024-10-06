@@ -19,8 +19,8 @@
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
 
 ## Available Commands
-npm install
-npm run dev
-npm run build
-npm run dev-nolog
-npm run build-nolog
+- npm install
+- npm run dev
+- npm run build
+- npm run dev-nolog
+- npm run build-nolog
